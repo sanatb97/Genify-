@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet"> 
+
+<style>
+body{
+    padding-top:30px;
+    
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    font-size: 100px;
+    background-image: url("{{ url_for('static',filename='music.gif') }}");
+    width: 100%;
+    height: 100%; 
+    background-position: fixed; 
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+input.container1 {
+    border: 2px solid red;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family:fantasy;
+    color:white;
+    font-size: 30px;
+}
+
+</style>
+
+</head>
+<body>
+        <div align="center"><b align="center" style="color:#fcff33;font-style: italic;font-family: 'Orbitron', sans-serif;">>>Genify<<</b>
+        <span style='color:white;font-style:bold;font-size:50px;'>(Genre recognition)</span><br/>
+        <form action="http://127.0.0.1:5000/uploader" method="post" enctype = "multipart/form-data">
+            <input class='container1' type='file' id="tb" name = 'file'/>
+            <input class="container1" type="submit"> 
+        </form>
+</body>
+</html>
